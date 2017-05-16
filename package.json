@@ -9,6 +9,7 @@
   "dependencies": {
     "node-jt400": "^1.4.0"
   },
+  "keywords": [ "node-red" ],
   "node-red"     : {
         "nodes": {
             "as400": "as400.js"
