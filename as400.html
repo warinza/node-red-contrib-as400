@@ -1,0 +1,44 @@
+<script type="text/javascript">
+    RED.nodes.registerType('as400',{
+        category: 'storage-input',
+        color:"#099B05",
+        defaults: {
+            name: {value:""},
+            host: {value:"127.0.0.1",required:true},
+            naming: {value:"system"}
+        },
+        credentials: {
+            user: {type: "text"},
+            password: {type: "password"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "db.png",
+        label: function() {
+            return this.name||"as400";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="as400">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-host"><i class="fa fa-globe"></i> Host</label>
+        <input type="text" id="node-input-host">
+    </div>
+        <div class="form-row">
+        <label for="node-input-user"><i class="fa fa-user"></i> User</label>
+        <input type="text" id="node-input-user">
+    </div>
+        <div class="form-row">
+        <label for="node-input-pass"><i class="fa fa-lock"></i> Password</label>
+        <input type="password" id="node-input-password">
+    </div>
+    <div class="form-row">
+        <label for="node-input-naming"><i class="fa fa-naming"></i> Naming</label>
+        <input type="text" id="node-input-naming">
+    </div>
+</script>
